@@ -1,0 +1,17 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "0906278F-3946-43C3-C332-658827E6B316",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "UERefProject",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"TargetPlatforms": [
+		"Android",
+		"IOS"
+	]
+}

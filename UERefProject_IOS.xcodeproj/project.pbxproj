@@ -1,0 +1,957 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7298C535FFB31C2F2A0DF4D3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85596FB6CE91F8C3DCE657E0 /* UE4CmdLineRun.m */; };
+		C12804AC350EC6F717FBAA24 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6029578830DA638243DE8E0B /* OpenGLES.framework */; };
+		BE9C3077E1F943F41CD9821F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85596FB6CE91F8C3DCE657E0 /* XCTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6029578830DA638243DE8E0B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		85596FB6CE91F8C3DCE657E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		96CE19817589E2ADB05AEA5C /* libUE4XcodeHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUE4XcodeHelper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6930AA51E76419FB1077F1 /* app.config */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "app.config"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/app.config"; sourceTree = SOURCE_ROOT; };
+		A7A660A86F7E71ADB7EF07CA /* AndroidProjectGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "AndroidProjectGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Android/AndroidProjectGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		49E3819C9451B63FB240A287 /* AndroidToolChain.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "AndroidToolChain.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Android/AndroidToolChain.cs"; sourceTree = SOURCE_ROOT; };
+		C39DBEF837505267F32005E7 /* UEBuildAndroid.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildAndroid.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Android/UEBuildAndroid.cs"; sourceTree = SOURCE_ROOT; };
+		B3056409FD1826E2EF6196AD /* UEDeployAndroid.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEDeployAndroid.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Android/UEDeployAndroid.cs"; sourceTree = SOURCE_ROOT; };
+		4D492ACE78BDC7E1AE5D618A /* BuildConfiguration.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "BuildConfiguration.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/BuildConfiguration.cs"; sourceTree = SOURCE_ROOT; };
+		B931A0EF40C998D15607A772 /* EngineConfiguration.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "EngineConfiguration.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/EngineConfiguration.cs"; sourceTree = SOURCE_ROOT; };
+		E2DB2220F04DCA7BF3222605 /* UEBuildBinary.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildBinary.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildBinary.cs"; sourceTree = SOURCE_ROOT; };
+		87FF0971A0B2FF3E3D7DC93B /* UEBuildClient.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildClient.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildClient.cs"; sourceTree = SOURCE_ROOT; };
+		A4D32B104BE749A39DA457B5 /* UEBuildConfiguration.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildConfiguration.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildConfiguration.cs"; sourceTree = SOURCE_ROOT; };
+		91E58DACB3D879E4616519EA /* UEBuildDeploy.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildDeploy.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildDeploy.cs"; sourceTree = SOURCE_ROOT; };
+		E0D5E37E44FE18C071C6F760 /* UEBuildEditor.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildEditor.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildEditor.cs"; sourceTree = SOURCE_ROOT; };
+		D4743E36AC425ED173C6B453 /* UEBuildGame.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildGame.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildGame.cs"; sourceTree = SOURCE_ROOT; };
+		3F7CD6CC49BA280E621CC9F1 /* UEBuildModule.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildModule.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildModule.cs"; sourceTree = SOURCE_ROOT; };
+		04462C4353FC75C512216DBB /* UEBuildPlatform.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildPlatform.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildPlatform.cs"; sourceTree = SOURCE_ROOT; };
+		D1E06C9BBAD545796AB45E8E /* UEBuildServer.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildServer.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildServer.cs"; sourceTree = SOURCE_ROOT; };
+		505847E2316D4B8ADC78E4C5 /* UEBuildTarget.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildTarget.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Configuration/UEBuildTarget.cs"; sourceTree = SOURCE_ROOT; };
+		42C091BCCD9B3D4604F4B6F4 /* HTML5ProjectGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "HTML5ProjectGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/HTML5/HTML5ProjectGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		F317079F0880E60A54532C3C /* HTML5ToolChain.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "HTML5ToolChain.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/HTML5/HTML5ToolChain.cs"; sourceTree = SOURCE_ROOT; };
+		43CB2E671DB010386B3E9091 /* UEBuildHTML5.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildHTML5.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/HTML5/UEBuildHTML5.cs"; sourceTree = SOURCE_ROOT; };
+		E4DF8556CF34FBBAABC90F77 /* IOSProjectGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "IOSProjectGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/IOS/IOSProjectGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		D839D69DF6E41888206558A6 /* IOSToolChain.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "IOSToolChain.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/IOS/IOSToolChain.cs"; sourceTree = SOURCE_ROOT; };
+		21A19003096F695BBF20FD29 /* UEBuildIOS.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildIOS.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/IOS/UEBuildIOS.cs"; sourceTree = SOURCE_ROOT; };
+		10BFB114BAA9F77D7AB69FCD /* UEDeployIOS.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEDeployIOS.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/IOS/UEDeployIOS.cs"; sourceTree = SOURCE_ROOT; };
+		4D70FD5A03D2B8A427D9633B /* LinuxProjectGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "LinuxProjectGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Linux/LinuxProjectGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		62D7E298C570D96C98D8B07E /* LinuxToolChain.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "LinuxToolChain.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Linux/LinuxToolChain.cs"; sourceTree = SOURCE_ROOT; };
+		44875E2521F992E1D725A985 /* UEBuildLinux.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildLinux.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Linux/UEBuildLinux.cs"; sourceTree = SOURCE_ROOT; };
+		11437468019BCE81FFBDEE40 /* MacProjectGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "MacProjectGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Mac/MacProjectGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		38BF8BD55AF26BC387A036E1 /* MacToolChain.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "MacToolChain.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Mac/MacToolChain.cs"; sourceTree = SOURCE_ROOT; };
+		E0791388261DE24DBCD33220 /* UEBuildMac.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildMac.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Mac/UEBuildMac.cs"; sourceTree = SOURCE_ROOT; };
+		B6CC5875F8AEFFEB03B8A339 /* UEDeployMac.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEDeployMac.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Mac/UEDeployMac.cs"; sourceTree = SOURCE_ROOT; };
+		5B7302EAECCFC7F5765BE4EC /* AssemblyInfo.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "AssemblyInfo.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Properties/AssemblyInfo.cs"; sourceTree = SOURCE_ROOT; };
+		808D4B3297009FC056FC900B /* ActionGraph.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "ActionGraph.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/ActionGraph.cs"; sourceTree = SOURCE_ROOT; };
+		D952B7C75DB9F09B1C0659E0 /* ActionHistory.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "ActionHistory.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/ActionHistory.cs"; sourceTree = SOURCE_ROOT; };
+		FEED91F6B50346E57145D8B7 /* BuildException.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "BuildException.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/BuildException.cs"; sourceTree = SOURCE_ROOT; };
+		CD0CCEFEF2515DF4E171EFA6 /* BuildHostPlatform.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "BuildHostPlatform.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/BuildHostPlatform.cs"; sourceTree = SOURCE_ROOT; };
+		4BE6483AF704F8090B1F070F /* CPPEnvironment.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "CPPEnvironment.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/CPPEnvironment.cs"; sourceTree = SOURCE_ROOT; };
+		2B31D95B77FC71C300AEF7E2 /* CPPHeaders.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "CPPHeaders.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/CPPHeaders.cs"; sourceTree = SOURCE_ROOT; };
+		B6969B03B620C187E6994314 /* DependencyCache.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "DependencyCache.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/DependencyCache.cs"; sourceTree = SOURCE_ROOT; };
+		3F58584440FA6AA44B3F1863 /* DirectoryLookupCache.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "DirectoryLookupCache.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/DirectoryLookupCache.cs"; sourceTree = SOURCE_ROOT; };
+		B95E02BA40CE0E124A5BEB52 /* Distcc.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "Distcc.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/Distcc.cs"; sourceTree = SOURCE_ROOT; };
+		54FA5645AEF5172D0EFD59ED /* DynamicCompilation.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "DynamicCompilation.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/DynamicCompilation.cs"; sourceTree = SOURCE_ROOT; };
+		948FEF19E99B948C50046052 /* ExternalExecution.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "ExternalExecution.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/ExternalExecution.cs"; sourceTree = SOURCE_ROOT; };
+		C6FA312102890CC8AA51E45B /* FileItem.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "FileItem.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/FileItem.cs"; sourceTree = SOURCE_ROOT; };
+		F8DE437B519AB3CBE59D348D /* FlatCPPIncludeDepencencyCache.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "FlatCPPIncludeDepencencyCache.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/FlatCPPIncludeDepencencyCache.cs"; sourceTree = SOURCE_ROOT; };
+		359BD2D1A2DEC3FA1594EC74 /* JunkDeleter.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "JunkDeleter.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/JunkDeleter.cs"; sourceTree = SOURCE_ROOT; };
+		F7D78761C658CCFDC9AE8FDC /* LinkEnvironment.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "LinkEnvironment.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/LinkEnvironment.cs"; sourceTree = SOURCE_ROOT; };
+		3C077CF9860BF737D22342C6 /* LocalExecutor.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "LocalExecutor.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/LocalExecutor.cs"; sourceTree = SOURCE_ROOT; };
+		73741636A402EDBF04631F00 /* MakefileGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "MakefileGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/MakefileGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		0F9C5BA446CB887D0218D986 /* ModuleProcessingException.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "ModuleProcessingException.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/ModuleProcessingException.cs"; sourceTree = SOURCE_ROOT; };
+		58C6B7838232F6F672FE5C1D /* Plugins.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "Plugins.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/Plugins.cs"; sourceTree = SOURCE_ROOT; };
+		CEB24A05CDE732192A5C4728 /* Project.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "Project.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/Project.cs"; sourceTree = SOURCE_ROOT; };
+		4C9A7C83C5FB903F9C5B3B59 /* ProjectFileGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "ProjectFileGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/ProjectFileGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		B7194CACC3EE6E8F16EFC973 /* RPCUtilHelper.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "RPCUtilHelper.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/RPCUtilHelper.cs"; sourceTree = SOURCE_ROOT; };
+		1EB96760CF2DF2BD838DBA52 /* ResponseFile.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "ResponseFile.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/ResponseFile.cs"; sourceTree = SOURCE_ROOT; };
+		68916B4241B4AEF995BEF171 /* RulesCompiler.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "RulesCompiler.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/RulesCompiler.cs"; sourceTree = SOURCE_ROOT; };
+		584C07F3866DC52523A86E5D /* SourceFileSearch.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "SourceFileSearch.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/SourceFileSearch.cs"; sourceTree = SOURCE_ROOT; };
+		213073F5CDDEAE436DC2D3E4 /* Telemetry.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "Telemetry.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/Telemetry.cs"; sourceTree = SOURCE_ROOT; };
+		2DC60B36D9934F15DE4420A2 /* ThirdPartyHeaderFinder.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "ThirdPartyHeaderFinder.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/ThirdPartyHeaderFinder.cs"; sourceTree = SOURCE_ROOT; };
+		3E947619C1DA990B512ED52B /* UEPlatformProjectGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEPlatformProjectGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/UEPlatformProjectGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		4782F588EEEE842174DC61AE /* UProjectInfo.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UProjectInfo.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/UProjectInfo.cs"; sourceTree = SOURCE_ROOT; };
+		A0C4DED6D394E31D1F9AB813 /* Unity.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "Unity.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/Unity.cs"; sourceTree = SOURCE_ROOT; };
+		49D8C478F231EC2A625AD0DB /* UnrealBuildTool.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UnrealBuildTool.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/UnrealBuildTool.cs"; sourceTree = SOURCE_ROOT; };
+		EB2D9150E5E2B376628305F8 /* Utils.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "Utils.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/Utils.cs"; sourceTree = SOURCE_ROOT; };
+		B4F8007CE79BFED3754072F9 /* VCProject.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "VCProject.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/VCProject.cs"; sourceTree = SOURCE_ROOT; };
+		0D901B70BB314318B750DEEB /* VCProjectFileGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "VCProjectFileGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/VCProjectFileGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		E8FAF6833D08B69C41AF9EFB /* VCSolutionOptions.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "VCSolutionOptions.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/VCSolutionOptions.cs"; sourceTree = SOURCE_ROOT; };
+		F156B82D4F2DF0714E6BD2BF /* XGE.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "XGE.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/XGE.cs"; sourceTree = SOURCE_ROOT; };
+		3A516A5FBB4E6377AB8AB17E /* XcodeProject.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "XcodeProject.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/XcodeProject.cs"; sourceTree = SOURCE_ROOT; };
+		0C00D0C0CBE6A979AA2D7CD0 /* XcodeProjectFileGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "XcodeProjectFileGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/System/XcodeProjectFileGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		8A98772590946DC0A63CE3EB /* RemoteToolChain.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "RemoteToolChain.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/ToolChain/RemoteToolChain.cs"; sourceTree = SOURCE_ROOT; };
+		7CC958ED02B4984C5A93DDDF /* UEToolChain.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEToolChain.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/ToolChain/UEToolChain.cs"; sourceTree = SOURCE_ROOT; };
+		4E93EF4A93F4953E3EE447B0 /* CopyrightVerify.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "CopyrightVerify.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Utilities/CopyrightVerify.cs"; sourceTree = SOURCE_ROOT; };
+		988EB7E749B0B83E8A74A551 /* DictionaryExtensions.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "DictionaryExtensions.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Utilities/DictionaryExtensions.cs"; sourceTree = SOURCE_ROOT; };
+		FE20DF6AD6AAEA10087AA542 /* GraphVisualization.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "GraphVisualization.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Utilities/GraphVisualization.cs"; sourceTree = SOURCE_ROOT; };
+		4E1D992082A60D88853C4207 /* XmlConfigLoader.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "XmlConfigLoader.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Utilities/XmlConfigLoader.cs"; sourceTree = SOURCE_ROOT; };
+		4285C21F25078F769AA328CE /* UEBuildWinRT.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildWinRT.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/WinRT/UEBuildWinRT.cs"; sourceTree = SOURCE_ROOT; };
+		75889F43F2F27ED882F5F8B3 /* WinRTDeploy.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "WinRTDeploy.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/WinRT/WinRTDeploy.cs"; sourceTree = SOURCE_ROOT; };
+		79BAF55081C75E6A03CC2672 /* WinRTProjectGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "WinRTProjectGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/WinRT/WinRTProjectGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		3D4475BBBD0BBD0A85D21C80 /* WinRTToolChain.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "WinRTToolChain.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/WinRT/WinRTToolChain.cs"; sourceTree = SOURCE_ROOT; };
+		4DC3D2519020A06E35223400 /* UEBuildWindows.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "UEBuildWindows.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Windows/UEBuildWindows.cs"; sourceTree = SOURCE_ROOT; };
+		4F02DE74A6BD01CF0E5287BC /* VCEnvironment.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "VCEnvironment.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Windows/VCEnvironment.cs"; sourceTree = SOURCE_ROOT; };
+		0CEA1E0126DF997EB480C9D3 /* VCToolChain.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "VCToolChain.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Windows/VCToolChain.cs"; sourceTree = SOURCE_ROOT; };
+		BF9A3DDC7FA333D04D5EAAD2 /* WindowsProjectGenerator.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "WindowsProjectGenerator.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/Windows/WindowsProjectGenerator.cs"; sourceTree = SOURCE_ROOT; };
+		9161FF6E403D8D3B9DBF5753 /* Formatter.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "Formatter.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/fastJSON/Formatter.cs"; sourceTree = SOURCE_ROOT; };
+		51A3F07A0483EF83FC7D852C /* Getters.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "Getters.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/fastJSON/Getters.cs"; sourceTree = SOURCE_ROOT; };
+		5213FB25BDA0260D6482E914 /* JSON.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "JSON.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/fastJSON/JSON.cs"; sourceTree = SOURCE_ROOT; };
+		D3085A51E88C52433F6E90EF /* JsonParser.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "JsonParser.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/fastJSON/JsonParser.cs"; sourceTree = SOURCE_ROOT; };
+		B1ADC920D904F70ED48D95CE /* JsonSerializer.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "JsonSerializer.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/fastJSON/JsonSerializer.cs"; sourceTree = SOURCE_ROOT; };
+		22EE761C7B627BC434CCBC1A /* Reflection.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "Reflection.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/fastJSON/Reflection.cs"; sourceTree = SOURCE_ROOT; };
+		8FA0882AE98DB2EC79FD64BF /* SafeDictionary.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "SafeDictionary.cs"; path = "../UE4Source4.5/Engine/Source/Programs/UnrealBuildTool/fastJSON/SafeDictionary.cs"; sourceTree = SOURCE_ROOT; };
+		FEEA0ACBF22F717F5CD7FC7F /* UE4CmdLineRun.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Engine/Binaries/IOS/Payload/UE4CmdLineRun.xctest; sourceTree = "<group>"; };
+		B6E3B10D4331CA89EC7F74CF /* UERefProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UERefProject/Binaries/IOS/Payload/UERefProject.app; sourceTree = "<group>"; };
+		8205A358E2152CFE8E29FF95 /* UERefProject-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UERefProject-Info.plist"; path = UERefProject/Build/IOS/UERefProject-Info.plist; sourceTree = "<group>"; };
+		21D9D0723294109053C165D6 /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Source; path = ../../../Source; sourceTree = "<group>"; };
+		93E4D544423C62961B2351B3 /* Engine */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Engine; path = ../../../Engine; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXContainerItemProxy section */
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+/* End PBXTargetDependency section */
+
+/* Begin PBXGroup section */
+		1A92BFF70BDD6AF9CA4D6BD0 = {
+			isa = PBXGroup;
+			children = (
+				21D9D0723294109053C165D6 /* Source */,
+				93E4D544423C62961B2351B3 /* Engine */,
+				12F33F442B48D5086623E820 /* Products */,
+				2901531D64AA5FCECB17FADD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		12F33F442B48D5086623E820 = {
+			isa = PBXGroup;
+			children = (
+				96CE19817589E2ADB05AEA5C /* libUE4XcodeHelper.a */,
+				FEEA0ACBF22F717F5CD7FC7F /* UE4CmdLineRun.xctest */,
+				B6E3B10D4331CA89EC7F74CF /* UERefProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2901531D64AA5FCECB17FADD = {
+			isa = PBXGroup;
+			children = (
+				6029578830DA638243DE8E0B /* OpenGLES.framework */,
+				85596FB6CE91F8C3DCE657E0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C80F057548241D7663CECC5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $DEPLOYMENT_LOCATION = \"YES\" ]\nthen\ncp -R Engine/Binaries/IOS/Payload/libUE4XcodeHelper.a/ $DSTROOT/$LOCAL_APPS_DIR/libUE4XcodeHelper.a\nfi";
+		};
+		71691D23B02BEEDBB5650509 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $DEPLOYMENT_LOCATION = \"YES\" ]\nthen\ncp -R Engine/Binaries/IOS/Payload/UE4CmdLineRun.xctest/ $DSTROOT/$LOCAL_APPS_DIR/UE4CmdLineRun.xctest\nfi";
+		};
+		827F628BDE26193DCAF04501 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $DEPLOYMENT_LOCATION = \"YES\" ]\nthen\ncp -R UERefProject/Binaries/IOS/Payload/UERefProject.app/ $DSTROOT/$LOCAL_APPS_DIR/UERefProject.app\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0F2B9613D802C986390EF91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B66A14872D7F21020815DDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07DCF5AAAB848C47CD221DD /* UE4CmdLineRun.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EDC84F240C130AC4F53FC41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F2B9613D802C986390EF91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F065836E73C8A2F3415E76E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5628470F317DFBC0AC94CF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7298C535FFB31C2F2A0DF4D3 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B676F2A98C0EE04EF057E70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12804AC350EC6F717FBAA24 /* OpenGLES.framework in Frameworks */,
+				BE9C3077E1F943F41CD9821F /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		8CA5EF6672C374DB7D05FB2D /* UE4XcodeHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 946A116CFB87339CF0E95285 /* Build configuration list for PBXNativeTarget "UE4XcodeHelper" */;
+			buildPhases = (
+				A0F2B9613D802C986390EF91 /* Sources */,
+				F065836E73C8A2F3415E76E1 /* Frameworks */,
+				6C80F057548241D7663CECC5 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "UE4XcodeHelper";
+			productName = "UE4XcodeHelper";
+			productReference = 96CE19817589E2ADB05AEA5C /* libUE4XcodeHelper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CD2B4BAAD044778F03B18500 /* UE4CmdLineRun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2165E139F0A34D8E3CE54651 /* Build configuration list for PBXNativeTarget "UE4CmdLineRun" */;
+			buildPhases = (
+				3B66A14872D7F21020815DDD /* Sources */,
+				A5628470F317DFBC0AC94CF2 /* Frameworks */,
+				71691D23B02BEEDBB5650509 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "UE4CmdLineRun";
+			productName = "UE4CmdLineRun";
+			productReference = FEEA0ACBF22F717F5CD7FC7F /* UE4CmdLineRun.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B03F597AB2B51615D8B0AFF4 /* UERefProject - iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA2F44CA29214A2137DCF1B8 /* Build configuration list for PBXNativeTarget "UERefProject - iOS" */;
+			buildPhases = (
+				8EDC84F240C130AC4F53FC41 /* Sources */,
+				6B676F2A98C0EE04EF057E70 /* Frameworks */,
+				827F628BDE26193DCAF04501 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "UERefProject - iOS";
+			productName = "UERefProject - iOS";
+			productReference = B6E3B10D4331CA89EC7F74CF /* UERefProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FA8A87A97F953207905EFD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = EpicGames;
+			};
+			buildConfigurationList = 5AFC04FBD5F38228F027F30F /* Build configuration list for PBXProject "UE4" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A92BFF70BDD6AF9CA4D6BD0;
+			productRefGroup = 12F33F442B48D5086623E820 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CA5EF6672C374DB7D05FB2D /* UE4XcodeHelper */,
+				CD2B4BAAD044778F03B18500 /* UE4CmdLineRun */,
+				B03F597AB2B51615D8B0AFF4 /* UERefProject - iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		E597618D700086845231AED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MONOLITHIC_BUILD=1",
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				SUPPORTED_PLATFORMS = "macosx";
+				ONLY_ACTIVE_ARCH = YES;
+				USE_HEADERMAP = NO;
+				SDKROOT = macosx;
+				SYMROOT = Intermediate/Build;
+			};
+			name = Debug;
+		};
+		74E195EBBEEA5EFC93AC001F /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MONOLITHIC_BUILD=1",
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				SUPPORTED_PLATFORMS = "macosx";
+				ONLY_ACTIVE_ARCH = NO;
+				USE_HEADERMAP = NO;
+				SDKROOT = macosx;
+				SYMROOT = Intermediate/Build;
+			};
+			name = Test;
+		};
+		5AF5BED3BA91583CD0B049CF /* DebugGame */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MONOLITHIC_BUILD=1",
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				SUPPORTED_PLATFORMS = "macosx";
+				ONLY_ACTIVE_ARCH = NO;
+				USE_HEADERMAP = NO;
+				SDKROOT = macosx;
+				SYMROOT = Intermediate/Build;
+			};
+			name = DebugGame;
+		};
+		D711B1FC4DEE60CF3FB6188C /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MONOLITHIC_BUILD=1",
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				SUPPORTED_PLATFORMS = "macosx";
+				ONLY_ACTIVE_ARCH = NO;
+				USE_HEADERMAP = NO;
+				SDKROOT = macosx;
+				SYMROOT = Intermediate/Build;
+			};
+			name = Development;
+		};
+		D9C0999C542D97A8C7B043A0 /* Shipping */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MONOLITHIC_BUILD=1",
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				SUPPORTED_PLATFORMS = "macosx";
+				ONLY_ACTIVE_ARCH = NO;
+				USE_HEADERMAP = NO;
+				SDKROOT = macosx;
+				SYMROOT = Intermediate/Build;
+			};
+			name = Shipping;
+		};
+		6689F3FDD131EFF7580CDBF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "Binaries/IOS/Payload/UE4CmdLineRun.app/UE4CmdLineRun";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				DYNAMIC_NO_PIC = NO;
+				OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/IOS/UE4CmdLineRun/UE4CmdLineRun-Info.plist";
+				SYMROOT = "Binaries/IOS";
+				OBJROOT = "Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+			};
+			name = Debug;
+		};
+		D1C6A0CFDB0094D8E35C577D /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "Binaries/IOS/Payload/UE4CmdLineRun.app/UE4CmdLineRun";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				DYNAMIC_NO_PIC = NO;
+				OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/IOS/UE4CmdLineRun/UE4CmdLineRun-Info.plist";
+				SYMROOT = "Binaries/IOS";
+				OBJROOT = "Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+			};
+			name = Test;
+		};
+		7F1BB64FDEE27BED79E2B518 /* DebugGame */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "Binaries/IOS/Payload/UE4CmdLineRun.app/UE4CmdLineRun";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				DYNAMIC_NO_PIC = NO;
+				OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/IOS/UE4CmdLineRun/UE4CmdLineRun-Info.plist";
+				SYMROOT = "Binaries/IOS";
+				OBJROOT = "Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+			};
+			name = DebugGame;
+		};
+		5A273BE58904752506AD7474 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "Binaries/IOS/Payload/UE4CmdLineRun.app/UE4CmdLineRun";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				DYNAMIC_NO_PIC = NO;
+				OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/IOS/UE4CmdLineRun/UE4CmdLineRun-Info.plist";
+				SYMROOT = "Binaries/IOS";
+				OBJROOT = "Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+			};
+			name = Development;
+		};
+		B055C80CF81A0379101047B9 /* Shipping */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "Binaries/IOS/Payload/UE4CmdLineRun.app/UE4CmdLineRun";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				DYNAMIC_NO_PIC = NO;
+				OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/IOS/UE4CmdLineRun/UE4CmdLineRun-Info.plist";
+				SYMROOT = "Binaries/IOS";
+				OBJROOT = "Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+			};
+			name = Shipping;
+		};
+		3FB149C375D527F5CCC206D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"PRODUCT_NAME[sdk=iphoneos*]" = "UERefProject";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "UERefProject-simulator";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/UERefProject-Info.plist";
+				SYMROOT = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS";
+				OBJROOT = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS/Payload";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				INFOPLIST_OUTPUT_FORMAT = xml;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		52225273DFF1A3D468C1577A /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"PRODUCT_NAME[sdk=iphoneos*]" = "UERefProject";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "UERefProject-simulator";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/UERefProject-Info.plist";
+				SYMROOT = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS";
+				OBJROOT = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS/Payload";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				INFOPLIST_OUTPUT_FORMAT = xml;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos;
+			};
+			name = Test;
+		};
+		AF8DCEC0EFCB86B2FEA83E67 /* DebugGame */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"PRODUCT_NAME[sdk=iphoneos*]" = "UERefProject";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "UERefProject-simulator";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/UERefProject-Info.plist";
+				SYMROOT = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS";
+				OBJROOT = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS/Payload";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				INFOPLIST_OUTPUT_FORMAT = xml;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos;
+			};
+			name = DebugGame;
+		};
+		D3F7EB5710545DE17AF0B5C9 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"PRODUCT_NAME[sdk=iphoneos*]" = "UERefProject";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "UERefProject-simulator";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/UERefProject-Info.plist";
+				SYMROOT = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS";
+				OBJROOT = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS/Payload";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				INFOPLIST_OUTPUT_FORMAT = xml;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos;
+			};
+			name = Development;
+		};
+		813DBB2C8FA8488CB2A0850E /* Shipping */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"PRODUCT_NAME[sdk=iphoneos*]" = "UERefProject";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "UERefProject-simulator";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Build/iOS/XcodeSupportFiles/CustomResourceRules.plist";
+				INFOPLIST_FILE = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/UERefProject-Info.plist";
+				SYMROOT = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS";
+				OBJROOT = "/Users/matthiasneubert/dev/UERefProject/Intermediate/IOS/build";
+				CONFIGURATION_BUILD_DIR = "/Users/matthiasneubert/dev/UERefProject/Binaries/IOS/Payload";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+				);
+				HEADER_SEARCH_PATHS = (
+				);
+				USER_HEADER_SEARCH_PATHS = (
+				);
+				INFOPLIST_OUTPUT_FORMAT = xml;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos;
+			};
+			name = Shipping;
+		};
+		13ACA80B3B6D4F7F8DAE3AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				VALID_ARCHS = "x86_64 arm64 armv7 armv7s";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				"PRODUCT_NAME[sdk=macosx*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphoneos*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "$(TARGET_NAME)-simulator";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SDKROOT = macosx;
+				"SDKROOT[arch=x86_64]" = macosx;
+				"SDKROOT[arch=arm*]" = iphoneos;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Source/Editor/UnrealEd/Public/UnrealEd.h";
+			};
+			name = Debug;
+		};
+		9F2433E3DDF5735319F1FD5F /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				VALID_ARCHS = "x86_64 arm64 armv7 armv7s";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				"PRODUCT_NAME[sdk=macosx*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphoneos*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "$(TARGET_NAME)-simulator";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SDKROOT = macosx;
+				"SDKROOT[arch=x86_64]" = macosx;
+				"SDKROOT[arch=arm*]" = iphoneos;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Source/Editor/UnrealEd/Public/UnrealEd.h";
+			};
+			name = Test;
+		};
+		D4EC617B37E0C926B965EFD1 /* DebugGame */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				VALID_ARCHS = "x86_64 arm64 armv7 armv7s";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				"PRODUCT_NAME[sdk=macosx*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphoneos*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "$(TARGET_NAME)-simulator";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SDKROOT = macosx;
+				"SDKROOT[arch=x86_64]" = macosx;
+				"SDKROOT[arch=arm*]" = iphoneos;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Source/Editor/UnrealEd/Public/UnrealEd.h";
+			};
+			name = DebugGame;
+		};
+		E21DA3825FF65243B4288416 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				VALID_ARCHS = "x86_64 arm64 armv7 armv7s";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				"PRODUCT_NAME[sdk=macosx*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphoneos*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "$(TARGET_NAME)-simulator";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SDKROOT = macosx;
+				"SDKROOT[arch=x86_64]" = macosx;
+				"SDKROOT[arch=arm*]" = iphoneos;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Source/Editor/UnrealEd/Public/UnrealEd.h";
+			};
+			name = Development;
+		};
+		B5F64B35230992EDF2421C69 /* Shipping */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				VALID_ARCHS = "x86_64 arm64 armv7 armv7s";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				"PRODUCT_NAME[sdk=macosx*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphoneos*]" = "$(TARGET_NAME)";
+				"PRODUCT_NAME[sdk=iphonesimulator*]" = "$(TARGET_NAME)-simulator";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CONFIGURATION_BUILD_DIR = "Engine/Binaries/IOS/Payload";
+				SDKROOT = macosx;
+				"SDKROOT[arch=x86_64]" = macosx;
+				"SDKROOT[arch=arm*]" = iphoneos;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/matthiasneubert/dev/UE4Source4.5/Engine/Source/Editor/UnrealEd/Public/UnrealEd.h";
+			};
+			name = Shipping;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AFC04FBD5F38228F027F30F /* Build configuration list for PBXProject "UE4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E597618D700086845231AED2 /* Debug */,
+				5AF5BED3BA91583CD0B049CF /* DebugGame */,
+				D711B1FC4DEE60CF3FB6188C /* Development */,
+				D9C0999C542D97A8C7B043A0 /* Shipping */,
+				74E195EBBEEA5EFC93AC001F /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		2165E139F0A34D8E3CE54651 /* Build configuration list for PBXNativeTarget "UE4CmdLineRun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6689F3FDD131EFF7580CDBF7 /* Debug */,
+				7F1BB64FDEE27BED79E2B518 /* DebugGame */,
+				5A273BE58904752506AD7474 /* Development */,
+				B055C80CF81A0379101047B9 /* Shipping */,
+				D1C6A0CFDB0094D8E35C577D /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		DA2F44CA29214A2137DCF1B8 /* Build configuration list for PBXNativeTarget "UERefProject - iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB149C375D527F5CCC206D0 /* Debug */,
+				AF8DCEC0EFCB86B2FEA83E67 /* DebugGame */,
+				D3F7EB5710545DE17AF0B5C9 /* Development */,
+				813DBB2C8FA8488CB2A0850E /* Shipping */,
+				52225273DFF1A3D468C1577A /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		946A116CFB87339CF0E95285 /* Build configuration list for PBXNativeTarget "UE4XcodeHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13ACA80B3B6D4F7F8DAE3AEA /* Debug */,
+				D4EC617B37E0C926B965EFD1 /* DebugGame */,
+				E21DA3825FF65243B4288416 /* Development */,
+				B5F64B35230992EDF2421C69 /* Shipping */,
+				9F2433E3DDF5735319F1FD5F /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 3FA8A87A97F953207905EFD6 /* Project object */;
+}

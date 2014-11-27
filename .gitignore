@@ -1,0 +1,8 @@
+Binaries/*
+Saved/*
+Build/*
+DerivedDataCache/*
+Intermediate/*
+*.xcodeproj/xcuserdata/*
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+
